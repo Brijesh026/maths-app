@@ -1,0 +1,15 @@
+li {
+    list-style-type: none;
+}
+
+hr {
+    width: 500px;
+}
+
+h5 {
+    color: red;
+}
+
+h4 {
+    color: blue;
+}

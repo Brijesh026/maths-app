@@ -1,0 +1,19 @@
+<div class="text-center">
+    <button class="btn btn-primary m-2" (click)="onSelect('default')">Home Page</button>
+    <br>
+    <h4>Let us learn Tables</h4>
+    <h5>Please enter a positive whole number.</h5>
+    <br>
+    <input type="number" [(ngModel)]="inputValue" #input>
+    <br>
+    <button class="btn btn-primary m-2" (click)="showTable()" [disabled]="!inputValue || inputValue<=0 || inputValue%1!=0">Dispaly Table</button>
+    <button class="btn btn-danger m-2" (click)="clearTable()" [disabled]="!displayTable">Clear Table</button>
+    <br><hr>
+    <div class="text-center">
+    <ul *ngFor="let c of count">
+        <li *ngIf="displayTable">
+            {{tableNumber}} X {{c}} = {{ tableNumber * c }}
+        </li>
+    </ul>
+    </div>
+</div>
