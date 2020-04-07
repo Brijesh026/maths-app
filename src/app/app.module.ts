@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TablesComponent } from './tables/tables.component';
 import { GeometryComponent } from './geometry/geometry.component';
 import { MastersComponent } from './masters/masters.component';
+import { MagicMathsComponent } from './magic-maths/magic-maths.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TablesComponent,
     GeometryComponent,
-    MastersComponent
+    MastersComponent,
+    MagicMathsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,12 @@
 
-<app-masters (userChoice)="selectComponent($event)" *ngIf="choice === 'default' || masters1 === 'default' || masters2 === 'default'"></app-masters>
+<app-masters (userChoice)="selectComponent($event)" 
+*ngIf="choice === 'default' || masters1 === 'default' || masters2 === 'default' || masters3 === 'default'"></app-masters>
 
-    <app-tables (masters)="goHome1($event)" *ngIf="choice === 'tables' && masters1 === 'tables'"></app-tables>
+    <app-tables (masters)="goHome1($event)" 
+    *ngIf="choice === 'tables' && masters1 === 'tables'"></app-tables>
 
-    <app-geometry (masters2)="goHome2($event)" *ngIf="choice === 'geo' && masters2 === 'geo'"></app-geometry>
+    <app-geometry (masters2)="goHome2($event)" 
+    *ngIf="choice === 'geo' && masters2 === 'geo'"></app-geometry>
+
+    <app-magic-maths (masters3)="goHome3($event)" 
+    *ngIf="choice === 'magic' && masters3 === 'magic'"></app-magic-maths>

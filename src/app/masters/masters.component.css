@@ -9,3 +9,7 @@ h1 {
 h3, h5 {
     color: blue;
 }
+
+button {
+    font-size: 20px;
+}

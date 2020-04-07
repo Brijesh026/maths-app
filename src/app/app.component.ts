@@ -11,6 +11,7 @@ export class AppComponent {
   choice: string;
   masters1: string;
   masters2: string;
+  masters3: string;
   
   constructor(){
     this.choice = 'default';
@@ -21,6 +22,7 @@ export class AppComponent {
     this.choice = input;
     this.masters1 = 'tables';
     this.masters2 = 'geo';
+    this.masters3 = 'magic';
   }
 
   goHome1(input: string){
@@ -29,6 +31,10 @@ export class AppComponent {
 
   goHome2(input: string){
     this.masters2 = input;
+  }
+
+  goHome3(input: string){
+    this.masters3 = input;
   }
 
 }

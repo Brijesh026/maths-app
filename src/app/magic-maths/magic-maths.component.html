@@ -1,0 +1,43 @@
+<div class="text-center">
+    <br><br><br>
+    <button class="btn btn-primary m-2" (click)="onSelect('default')">Home Page</button>
+    <br>
+    <div *ngIf="!startMagic">
+        <h2>Let us do some magic maths.</h2>
+        <h2>Are you ready? Click on the button below to get started.</h2>
+        <br>
+        <button class="btn btn-warning m-2" (click)="onSelectMagic()">Start the Magic</button>
+        <br>
+    </div>
+    <div *ngIf="startMagic" class="text-center">
+
+        <div *ngIf="step1" class="magic">Just think of any positve integer.<br>
+            <button type="button" (click)="onStep2()" class="btn btn-warning btn-sm m-2">Next</button>
+        </div>
+
+        <div *ngIf="step2" class="magic">Now multiply that number by 3.<br>
+            <button type="button" (click)="onStep3()" class="btn btn-warning btn-sm m-2">Next</button>
+        </div>
+
+        <div *ngIf="step3" class="magic"> Add 45 to the result you got in the previous step.<br>
+            <button type="button" (click)="onStep4()" class="btn btn-warning btn-sm m-2">Next</button>
+        </div>
+
+        <div *ngIf="step4" class="magic"> Now double the number that you are left with in the last step.<br>
+            <button type="button" (click)="onStep5()" class="btn btn-warning btn-sm m-2">Next</button>
+        </div> 
+
+        <div *ngIf="step5" class="magic">In this last but one step, divide whatever you have by 6.<br>
+            <button type="button" (click)="onStep6()" class="btn btn-warning btn-sm m-2">Next</button>
+        </div>
+
+        <div *ngIf="step6" class="magic"> Now the final step, take away the number that you first thought of.<br>
+            <button type="button" (click)="showAnswer()" class="btn btn-warning btn-lg m-2">Reveal the secret</button>
+        </div>
+
+        <div *ngIf="showAns" class="magicAns"> The number that you are finally left with is 15.<br>
+            <button type="button" (click)="startAgain()" class="btn btn-warning btn-lg m-2">Start Again</button>
+        </div>
+
+    </div>
+</div>
