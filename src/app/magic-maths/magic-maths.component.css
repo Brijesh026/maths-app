@@ -5,7 +5,7 @@ h2 {
 }
 
 .magic {
-    color: maroon;
+    color: pink;
     font-size: 52px;
     font-style: italic;
 }
@@ -13,4 +13,8 @@ h2 {
 .magicAns {
     color: red;
     font-size: 62px;
+}
+
+button {
+    font-size: 22px;
 }

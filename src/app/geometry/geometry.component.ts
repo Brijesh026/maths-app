@@ -61,7 +61,7 @@ figureArea(length: HTMLInputElement, breadth?: HTMLInputElement){
   }
 
   if(this.figure === 'circle'){
-    this.area = 3.142 * length.valueAsNumber * length.valueAsNumber;
+    this.area = Math.round(3.142 * length.valueAsNumber * length.valueAsNumber);
     this.displayPeri = false;
     this.displayArea = true;
   }
@@ -83,7 +83,7 @@ figurePeri(length: HTMLInputElement, breadth?: HTMLInputElement){
   }
 
   if(this.figure === 'circle'){
-    this.perimeter = 2 * 3.142 * length.valueAsNumber;
+    this.perimeter = Math.round(2 * 3.142 * length.valueAsNumber);
     this.displayPeri = true;
     this.displayArea = false;
   }

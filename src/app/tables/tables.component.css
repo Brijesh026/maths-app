@@ -6,10 +6,12 @@ hr {
     width: 500px;
 }
 
-h5 {
+h2 {
     color: red;
 }
 
-h4 {
-    color: blue;
+.t1 {
+    color: red;
+    font-size: 22px;
+    font-weight: bold;
 }

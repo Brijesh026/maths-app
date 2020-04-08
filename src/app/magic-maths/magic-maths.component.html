@@ -1,6 +1,6 @@
 <div class="text-center">
     <br><br><br>
-    <button class="btn btn-primary m-2" (click)="onSelect('default')">Home Page</button>
+    <button class="btn btn-success m-2" (click)="onSelect('default')">Home Page</button>
     <br>
     <div *ngIf="!startMagic">
         <h2>Let us do some magic maths.</h2>
@@ -31,12 +31,13 @@
             <button type="button" (click)="onStep6()" class="btn btn-warning btn-sm m-2">Next</button>
         </div>
 
-        <div *ngIf="step6" class="magic"> Now the final step, take away the number that you first thought of.<br>
-            <button type="button" (click)="showAnswer()" class="btn btn-warning btn-lg m-2">Reveal the secret</button>
+        <div *ngIf="step6" class="magic"> Now the final step, take away the number that you thought of first.<br>
+            <button type="button" (click)="showAnswer()" class="btn btn-warning btn-lg m-2">So where's the magic?</button>
         </div>
 
-        <div *ngIf="showAns" class="magicAns"> The number that you are finally left with is 15.<br>
-            <button type="button" (click)="startAgain()" class="btn btn-warning btn-lg m-2">Start Again</button>
+        <div *ngIf="showAns" class="magicAns"> Ain't you finally left with 15 ????<br>
+            <div class="text-center"> This is the magic I told you about !!! </div>
+            <button type="button" (click)="startAgain()" class="btn btn-warning btn-lg m-2">Let's play again</button>
         </div>
 
     </div>

@@ -1,69 +1,69 @@
 <div class="container text-center">
-    <button class="btn btn-primary" (click)="onSelect('default')">Home Page</button>
+    <button class="btn btn-success btn-lg" (click)="onSelect('default')">Home Page</button>
 </div>
 <div *ngIf="figure === 'figure'" class="container text-center">
     <h2>Click on the geometrical figure you want to deal with.</h2><br>
     <br>
-    <button class="btn btn-primary btn-lg m-2" (click)="selectSquare()">Square</button>
-    <button class="btn btn-success btn-lg m-2" (click)="selectRect()">Rectangle</button>
-    <button class="btn btn-danger btn-lg m-2" (click)="selectCircle()">Circle</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="selectSquare()">Square</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="selectRect()">Rectangle</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="selectCircle()">Circle</button>
 </div>
 
 <div *ngIf="figure === 'square'" class="container text-center">
-    <label>Please enter the length of the Square:</label>
+    <h3>Please enter the length of the Square:</h3>
     <br>
     <input type="number" id="sql" name="sql" #sql [(ngModel)]="input1">
     <br>
-    <button class="btn btn-success btn-lg m-2" (click)="figureArea(sql)" [disabled]="!input1 || input1<=0">Area</button>
-    <button class="btn btn-success btn-lg m-2" (click)="figurePeri(sql)" [disabled]="!input1 || input1<=0">Perimeter</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="figureArea(sql)" [disabled]="!input1 || input1<=0">Area</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="figurePeri(sql)" [disabled]="!input1 || input1<=0">Perimeter</button>
     <br>
-    <button class="btn btn-danger btn-sm m-2" (click)="goHome()">Start Again</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="goHome()">Start Again</button>
     <br>
     <div *ngIf="displayArea" class="disp">
         The <b>area</b> of this Square is {{ area }} sq. units.
     </div>
     <div *ngIf="displayPeri" class="disp">
-        The <b>Perimeter</b> of the Square is {{ perimeter }} units.
+        The <b>perimeter</b> of the Square is {{ perimeter }} units.
     </div>
 </div>
 
 <div *ngIf="figure === 'rect'" class="container text-center">
-    <label>Please enter the length of the Rectangle:</label>
+    <h3>Please enter the length of the Rectangle:</h3>
     <br>
     <input type="number" id="rl" name="rl" #rl [(ngModel)]="input1">
     <br>
-    <label>Please enter the breadth of the Rectangle:</label>
+    <h3>Please enter the breadth of the Rectangle:</h3>
     <br>
     <input type="number" id="rb" name="rb" #rb [(ngModel)]="input2">
     <br>
-    <button class="btn btn-success btn-lg m-2" (click)="figureArea(rl,rb)" [disabled]="!input1 || input1<=0 || !input2 || input2<=0">Area</button>
-    <button class="btn btn-success btn-lg m-2" (click)="figurePeri(rl,rb)" [disabled]="!input1 || input1<=0 || !input2 || input2<=0">Perimeter</button>
-    <br>
-    <button class="btn btn-danger btn-sm m-2" (click)="goHome()">Start Again</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="figureArea(rl,rb)" [disabled]="!input1 || input1<=0 || !input2 || input2<=0">Area</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="figurePeri(rl,rb)" [disabled]="!input1 || input1<=0 || !input2 || input2<=0">Perimeter</button>
+
+    <button class="btn btn-warning btn-lg m-2" (click)="goHome()">Start Again</button>
     <br>
     <div *ngIf="displayArea" class="disp">
         The <b>area</b> of this Rectangle is {{ area }} sq. units.
     </div>
     <div *ngIf="displayPeri" class="disp">
-        The <b>Perimeter</b> of this Rectangle is {{ perimeter }} units.
+        The <b>perimeter</b> of this Rectangle is {{ perimeter }} units.
     </div>
 </div>
 
 <div *ngIf="figure === 'circle'" class="container text-center">
-    <label>Please enter the radius of the Cirlce:</label>
+    <h3>Please enter the radius of the Cirlce:</h3>
     <br>
     <input type="number" id="radius" name="radius" #radius [(ngModel)]="input1">
     <br>
-    <button class="btn btn-success btn-lg m-2" (click)="figureArea(radius)" [disabled]="!input1 || input1<=0">Area</button>
-    <button class="btn btn-success btn-lg m-2" (click)="figurePeri(radius)" [disabled]="!input1 || input1<=0">Perimeter</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="figureArea(radius)" [disabled]="!input1 || input1<=0">Area</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="figurePeri(radius)" [disabled]="!input1 || input1<=0">Perimeter</button>
     <br>
-    <button class="btn btn-danger btn-sm m-2" (click)="goHome()">Start Again</button>
+    <button class="btn btn-warning btn-lg m-2" (click)="goHome()">Start Again</button>
     <br>
     <div *ngIf="displayArea" class="disp">
         The <b>area</b> of this Circle is {{ area }} sq. units.
     </div>
     <div *ngIf="displayPeri" class="disp">
-        The <b>Perimeter</b> of this Circle is {{ perimeter }} units.
+        The <b>perimeter</b> of this Circle is {{ perimeter }} units.
     </div>
 </div>
 
